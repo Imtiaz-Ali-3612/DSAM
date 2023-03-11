@@ -51,8 +51,24 @@ Resource Management: Middleware can manage distributed resources such as databas
 
 ## Clustering 
 Clustering is a technique used in distributed computing and computer networking to group multiple independent computers, servers or nodes together to work as a single system. Clusters are typically used to improve performance, reliability, load balancing, reduce failover, and availability of a system by allowing multiple computers to work together to perform tasks.
+
+
 Verticle Clustering : multiple services same machine 
 Horizontal Clustering : different machines
 
 
-Vertical Clustering : 
+## Provide Middleware 
+1- Synchronous & Asynchronous
+
+Distinguish between the type of coupling:
+ Pure signal: the message does not contain any data; computing is done
+based on the existence of the message
+ Object.notify()/notifyAll() in Java (Thread synchronization)
+ Structured/Unstructured data: the message contains data and the
+receiver knows how to process it
+ send some text to a translation service
+ Data and Command: the message contains data and a reference to a
+processing style
+ send address data and whether to create/update an entry
+ Data and Processor: the message contains data and executable code
+for processing it.
