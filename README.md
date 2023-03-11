@@ -2,14 +2,14 @@
 
 Core Characterstics of DS :
 
-#Autonomous Entities / Partial Failures
+## Autonomous Entities / Partial Failures
 1. No Global Time
 2. No Global Memory
 3. Communication Errors
 4. Heterogeneity (technical, semantical)
 5. Complex Associations (dynamic bindings, multi-party)
 
-#Dependency Injection & Spring Framework
+## Dependency Injection & Spring Framework
 Problems without dependency injection :
 1- If many classes needed the object they all would have created new instance, which may created issue with memory.
 2- If class is singleton we cannot instantiate the class in every class.
