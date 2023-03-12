@@ -138,7 +138,21 @@ private DataSource dataSource;
 In Spring Boot, IoC is achieved through the use of the Spring Container, also known as the Application Context. The Spring Container manages the creation, configuration, and lifecycle of the objects (known as Beans) that make up an application. Instead of creating and managing objects directly in code, developers define the objects as Beans in configuration files or with annotations and let the Spring Container handle their instantiation and injection.
 In addition to IoC, Spring Boot also makes use of other design patterns such as Dependency Injection (DI) 
 
+
+##JPA
+lazy initialization Exception : by default the repository does not fetch the child data so don't try to access the child data without eager loading (defaults for 1-* & *-* )
+eager loading : everytime the parent is accessed the child will be there also when you don't need it cause performance issues (defaults for many to one & 1-1) 
+
+## Entity Graphs
+configuring lazy loading with Entity Graphs ( represents lazy fetched data to be retrieved in same query)
+EntityGraph(value="Movies.movies) need to be there otherwise there witll be Lazy initialization Exception
+
 ## Principles of REST
 
-
+ Principles
+• Addressable resources
+• Representation-oriented manipulation of resources
+• Self-descriptive messages
+• Stateless communication
+• HATEOAS (hypermedia as the engine of application state)
 
