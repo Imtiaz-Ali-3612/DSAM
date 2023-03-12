@@ -72,3 +72,73 @@ processing style
  send address data and whether to create/update an entry
  Data and Processor: the message contains data and executable code
 for processing it.
+
+
+
+## Persistance Context
+collection of managed entity objects, spring boot manages the lifecycle of all the entities
+synchronizes the objects with DB
+
+## @autowired annotation
+
+allows access to the entity object without instatiating the object, Spring boot takes care of instatiation and lifecycle of object
+
+because of this we are kind of accessing the proxy, so JPA entity can never be final.
+
+
+*Owning side is the one who has the FK
+
+## Core Principles of JAVA EE 
+1- Dependency Injection
+2- Implicit Services : DI, security, Data Access from db
+3- Interceptors : Intercepting the method and calling some other functions such as logging etc before/after the main function by adding some proxy. Method Interceptors
+4- Annotations : Compile Time ( @Data), runtime (@Profile -> Dev, Prod switching) , Built in (@Override,@Deprecated) 
+@Bean -> method instatiates the object, @Configuration -> indicated a new component and has @Bean annotation
+
+## Inversion of Control 
+Inversion of Control (IoC) is a design pattern in software development that allows for loosely coupled components and improves the modularity and extensibility of an application. Spring Boot, a popular Java-based framework, makes use of IoC extensively.
+
+@Bean
+public DataSource dataSource() {
+   DriverManagerDataSource dataSource = new DriverManagerDataSource();
+   dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+   dataSource.setUrl("jdbc:mysql://localhost:3306/mydb");
+   dataSource.setUsername("root");
+   dataSource.setPassword("password");
+   return dataSource;
+}
+Then, in other classes, the developer can simply annotate a DataSource variable with @Autowired to have the Spring Container inject the Bean:
+
+##class path scanning 
+Classpath is scanned at startup and all beans and components are instantiated by the
+framework resulting in the ApplicationContext (sum of all configured components and
+beans)
+@Service => Business layer, @Repository => Persistance layer, @Controller => MVC , @Configuration, @Bean => Component 
+
+
+## Spring Boot 
+ Extension of the spring framework (spring framework is complex to use & configure)
+• Eliminating boilerplate configuration for setting up spring application - autoconfiguration/ makes it easy to setup new project
+• Build dependency management via starters
+• Resolves application context: Servlet, Filter and ServletContextInitializer
+• Spring Boot also includes an embedded web server, which allows developers to quickly create and deploy web applications without needing to set up a separate web server.
+
+## Model model
+spring UI class to put the data in also get data from client.
+
+## Java bean Validation
+@NotNull, @Min(),@Size(max=)
+
+in method we recieve Errors class object which has hasErrors() method by which we redirect to client to tell the client about the errors
+
+
+@Autowired
+private DataSource dataSource;
+
+In Spring Boot, IoC is achieved through the use of the Spring Container, also known as the Application Context. The Spring Container manages the creation, configuration, and lifecycle of the objects (known as Beans) that make up an application. Instead of creating and managing objects directly in code, developers define the objects as Beans in configuration files or with annotations and let the Spring Container handle their instantiation and injection.
+In addition to IoC, Spring Boot also makes use of other design patterns such as Dependency Injection (DI) 
+
+## Principles of REST
+
+
+
