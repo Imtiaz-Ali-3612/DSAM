@@ -113,7 +113,20 @@ Then, in other classes, the developer can simply annotate a DataSource variable 
 Classpath is scanned at startup and all beans and components are instantiated by the
 framework resulting in the ApplicationContext (sum of all configured components and
 beans)
-@Service => Business layer, @Repository => Persistance layer, @Controller => MVC , @Configuration, @Bean => Component 
+@Service => Business layer, @Repository => Persistance layer, @Controller => MVC , @Configuration, @Bean => Component
+
+
+## Servlet
+A Java Servlet is a technology used for developing web applications in Java. It is a Java class that extends the capabilities of a web server by responding to incoming requests and generating dynamic content.
+
+When a client sends a request to a web server, the server first passes the request to the appropriate Servlet based on the URL pattern specified in the web.xml file or through annotations. The Servlet processes the request and generates a response, which is then sent back to the client by the web server.
+
+Java Servlets are commonly used for tasks such as collecting and processing form data, generating dynamic HTML pages, and interacting with databases. They can also be used for implementing complex business logic, handling user authentication, and managing session data.
+
+Java Servlets are part of the Java EE (Enterprise Edition) platform, which provides a set of APIs and services for building enterprise-class applications. The latest version of Java EE is Jakarta EE, which was formerly known as Java EE before being transferred to the Eclipse Foundation.
+
+
+
 
 
 ## Spring Boot 
@@ -156,3 +169,13 @@ EntityGraph(value="Movies.movies) need to be there otherwise there witll be Lazy
 • Stateless communication
 • HATEOAS (hypermedia as the engine of application state)
 
+ 
+## Fire store
+schemaless, fast because of no joins and keys are sorted based on binary search, only one inequality filter, query result size defines response time not database size
+Native Mode : realtime data change support, document form , each document has new key
+Data Store mode : form of nodes
+
+## FAAS
+event driven model, amazon s3, implement handler function extend class from request handler, 
+light weight so startup is fast, stateless so easy to scale
+scale up and scale to zero, no operational task, provider managed execution env, pay per use
