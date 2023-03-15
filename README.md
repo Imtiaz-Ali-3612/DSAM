@@ -2,15 +2,18 @@
 
 ## Core Characterstics of DS :
 
-1. Autonomous Entities / Partial Failures
+1. Autonomous Entities / Partial Failures : one system in DS does not know about other communicate via middleware
 2. No Global Time
 3. No Global Memory
-4. Communication Errors
-5. Heterogeneity (technical, semantical)
-6. Complex Associations (dynamic bindings, multi-party)
+4. Communication Errors : occurs because of no synchrnization, MITM attacks
+5. Heterogeneity (technical, semantical) : each system may server different purpose
+6. Complex Associations (dynamic bindings, multi-party) 
 
 ## Dependency Injection & Spring Framework
+Dependency injection is basically providing object via constructor.
+
 Problems without dependency injection :
+
 1- If many classes needed the object they all would have created new instance, which may created issue with memory.
 2- If class is singleton we cannot instantiate the class in every class.
 3- Difficult to test
@@ -22,17 +25,21 @@ in case of Spring boot Spring framework handles the dependency, we Inject the ob
 and to let spring know we need the object of class we declare the class with @Service() annotation.
 now spring framework manages the object instantiation for us and pass same object to all classes thats going to need the service.
 
+@Inject() (Java EE specific) and @autowired (spring specific) both does same dependency injection ( look for the beans matching the name)
+
+
+
 ## Failure Models in Distributed Systems 
 1. Sysnchronization : two services are synchrinzed while performing the task
 2. Scheduling : 
 3. Communication Failure : 
 4. Security Failure ( MITM) : Man in the middle can occur to demage/steal the information
 
-## Potential of DS 
-1. Robustness ( less likely to cause severe demage due to errors/
-2. Flexibility
-3. Availability 
-4. Cost Saving
+## Potential of DS
+1. Robustness ( continue to serve requests even one the nodes failed)
+2. Flexibility (adapting to changing requirements and conditions such as scalability)
+3. Availability (system is available all the time, because of several redundent nodes)
+4. Cost Saving ( only need to upgrade services that are more in demand)
 
 ## Middelware :
 Middleware in distributed systems is software that acts as a bridge between different applications, services, or systems, enabling them to communicate and interact with each other seamlessly.
