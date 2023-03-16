@@ -96,10 +96,15 @@ because of this we are kind of accessing the proxy, so JPA entity can never be f
 *Owning side is the one who has the FK
 
 ## Core Principles of JAVA EE 
+
 1- Dependency Injection
+
 2- Implicit Services : DI, security, Data Access from db
+
 3- Interceptors : Intercepting the method and calling some other functions such as logging etc before/after the main function by adding some proxy. Method Interceptors
+
 4- Annotations : Compile Time ( @Data), runtime (@Profile -> Dev, Prod switching) , Built in (@Override,@Deprecated) 
+
 @Bean -> method instatiates the object, @Configuration -> indicated a new component and has @Bean annotation
 
 ## Inversion of Control 
